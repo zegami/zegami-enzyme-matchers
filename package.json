@@ -1,24 +1,29 @@
 {
   "name": "zegami-enzyme-matchers",
-  "version": "0.0.3",
-  "description": "Project for the Zegami Enzyme Matcher Functions for using with Jest/Enzyme",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zegami/zegami-enzyme-matchers.git"
-  },
+  "version": "0.0.4",
+  "description": "Zegami Testing Matchers for Enzyme",
+  "main": "lib/index.js",
   "homepage": "https://github.com/zegami/zegami-enzyme-matchers#readme",
   "author": "Steve Saxton <steves@codeuniquely.co.uk>",
+  "license": "MIT",
   "scripts": {
-    "build": "babel src --out-dir lib --ignore tests",
+    "clean": "rm -rf ./lib",
     "lint": "eslint --ext .js src || true",
     "lint:fix": "eslint --ext .js src --fix src || true",
-    "test": "jest --coverage"
+    "test": "jest --coverage --maxWorkers=4",
+    "build": "babel src --out-dir lib --ignore tests",
+    "prepublish": "npm run build"
   },
   "files": [
     "lib"
   ],
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zegami/zegami-enzyme-matchers.git"
+  },
+  "bugs": {
+    "url": "https://https://github.com/zegami/zegami-enzyme-matchers/issues"
+  },
   "dependencies": {
     "circular-json-es6": "^2.0.1",
     "deep-equal-ident": "^1.1.1"
