@@ -22,7 +22,6 @@ logs
 jest_*
 
 # anything that can be generated
-lib
 coverage
 README.html
 .#*
