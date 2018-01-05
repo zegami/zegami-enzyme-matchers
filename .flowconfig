@@ -1,0 +1,14 @@
+[version]
+
+[include]
+
+[ignore]
+.*/node_modules/fbjs/.*
+.*/lib
+
+[libs]
+
+[options]
+module.name_mapper='^zegami-enzyme-matchers$' -> '<PROJECT_ROOT>/src'
+
+[lints]
