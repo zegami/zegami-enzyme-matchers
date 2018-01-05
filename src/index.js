@@ -7,9 +7,11 @@
  */
 
 import toBeAFunction from './assertions/toBeAFunction';
+import toHaveClassName from './assertions/toHaveClassName';
 
 export default {
   toBeAFunction,
+  toHaveClassName,
 };
 
 export type { EnzymeObject, Matcher, MatcherMethods } from './types';
