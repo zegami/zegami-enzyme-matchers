@@ -22,9 +22,9 @@ function toBeAFunction (enzymeWrapper: EnzymeObject): Matcher {
       enzymeWrapper
     )}) not to be a "Function" but it was`,
     contextualInformation: {
-      expected: ` ${html(enzymeWrapper)}`,
+      expected: ` ${getNodeName(enzymeWrapper)}`,
     },
   };
 }
 
-export default single(toBeAFunction);
+export default toBeAFunction;

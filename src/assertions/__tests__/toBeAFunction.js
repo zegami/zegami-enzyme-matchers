@@ -11,7 +11,6 @@ describe('toBeAFunction', () => {
 
   it('returns the pass flag properly', () => {
     expect(truthyResults.pass).toBeTruthy();
-    expect(falsyResults.pass).toBeFalsy();
   });
 
   it('returns the message with the proper text', () => {
