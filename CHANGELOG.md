@@ -1,3 +1,7 @@
+0.0.15
+=====
+  * toHaveClassName, coverage at 100%
+
 0.0.14
 =====
   * toHaveText, coverage at 100%

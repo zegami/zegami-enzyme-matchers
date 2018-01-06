@@ -21,10 +21,20 @@ describe('toHaveClassName', () => {
       const wrapper = builder(<Fixture />);
       const truthyResults = toHaveClassName(wrapper.find('.bar'), 'bar');
       const falsyResults = toHaveClassName(wrapper.find('.bar'), 'asldfkj');
+      const multipleResults = toHaveClassName(wrapper.find('.baux'), 'baux');
+      const noMatchResults = toHaveClassName(wrapper.find('.baux'), 'foo');
+      const noResults = toHaveClassName(wrapper.find('.missing'), 'bar');
+      const dotResults = toHaveClassName(wrapper.find('.foo'), '.foo');
+      const oddResults = toHaveClassName(wrapper.find('.foo'), '');
 
       it('returns the pass flag properly', () => {
         expect(truthyResults.pass).toBeTruthy();
         expect(falsyResults.pass).toBeFalsy();
+        expect(multipleResults.pass).toBeTruthy();
+        expect(noMatchResults.pass).toBeFalsy();
+        expect(noResults.pass).toBeFalsy();
+        expect(dotResults.pass).toBeTruthy();
+        expect(oddResults.pass).toBeFalsy();
       });
 
       it(`returns the message with the proper pass verbage (${builder.name})`, () => {

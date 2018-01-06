@@ -22,25 +22,27 @@ export default function toHaveClassName (
     normalizedClassName = `.${normalizedClassName}`;
   }
 
+  let allMatch = true;
+
   // handle different lengths of enzymeWrappers
   switch (enzymeWrapper.getElements().length) {
-    case 0:
+    case 0: {
       break; // this will and should fail the test
-    case 1:
-      pass = enzymeWrapper.is(normalizedClassName);
+    }
+    case 1: {
+      pass = normalizedClassName !== '.' && enzymeWrapper.is(normalizedClassName);
       actualClassName = enzymeWrapper.prop('className');
       break;
-    default:
-      let allMatch = true;
-
+    }
+    default: {
       enzymeWrapper.forEach(node => {
-        if (!node.is(normalizedClassName)) {
+        if (normalizedClassName === '.' || !node.is(normalizedClassName)) {
           allMatch = false;
         }
         actualClassName = node.prop('className');
       });
-
       pass = allMatch;
+    }
   }
 
   return {
