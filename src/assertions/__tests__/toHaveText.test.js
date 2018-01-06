@@ -17,10 +17,16 @@ describe('toHaveText', () => {
   [shallow, mount].forEach(builder => {
     describe(builder.name, () => {
       const wrapper = builder(<Fixture />).find('#full');
+      const empty = builder(<Fixture />).find('#empty');
+
+      const textResults = toHaveText(wrapper);
+      const emptyResults = toHaveText(empty);
       const truthyResults = toHaveText(wrapper, 'Test');
-      const falsyResults = toHaveText(wrapper, 'Turdz');
+      const falsyResults = toHaveText(wrapper, 'No matching text like this');
 
       it('returns the pass flag properly', () => {
+        expect(textResults.pass).toBe(true);
+        expect(emptyResults.pass).toBe(false);
         expect(truthyResults.pass).toBeTruthy();
         expect(falsyResults.pass).toBeFalsy();
       });
