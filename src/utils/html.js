@@ -40,6 +40,12 @@ function mapWrappersHTML (wrapper: EnzymeObject): Array<string> {
 }
 
 export default function printHTMLForWrapper (wrapper: EnzymeObject): string {
+  if (!wrapper.getElements) {
+    console.log('wrapper', wrapper); // eslint-disable-line no-console
+    // console.log('wrapper.getElements()', wrapper.getElements()); // eslint-disable-line no-console
+    return '[empty set]';
+  }
+
   switch (wrapper.getElements().length) {
     case 0: {
       return '[empty set]';

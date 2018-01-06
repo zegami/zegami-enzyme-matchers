@@ -32,16 +32,33 @@ describe('html', () => {
       it('prints props with nodes', () => {
         const Fixture = () => (
           <div>
-            <i className="foo" />
+            <i className="foo">
+              <p>Has more children</p>
+            </i>
             <i disabled />
           </div>
         );
 
         expect(html(builder(<Fixture />).find('i'))).toBe(`Multiple nodes found:
-0: <i className="foo"/>
+0: <i className="foo">[..children..]</i
 1: <i disabled="true"/>
 `);
       });
+    });
+  });
+
+  describe('isObjectWrapper', () => {
+    it('prints props with objects', () => {
+      const array = [
+        <p>Hello</p>,
+        <p>World</p>
+      ];
+      const Fixture = () => (
+        <div>
+          {array}
+        </div>
+      );
+      expect(html(Fixture)).toBe('[empty set]');
     });
   });
 

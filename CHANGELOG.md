@@ -1,3 +1,7 @@
+0.0.23
+=====
+  * html, coverage increased
+
 0.0.22
 =====
   * toHaveHtml, coverage at 100%
