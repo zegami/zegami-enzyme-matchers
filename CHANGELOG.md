@@ -1,3 +1,7 @@
+0.0.6
+=====
+  * fix name of test to have .test.js extensions
+
 0.0.5
 =====
   * Add `toHaveClassName` matcher

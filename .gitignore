@@ -5,8 +5,6 @@
 
 # Dependency directories
 node_modules/
-bower_components
-jspm_packages/
 
 # IDE / Text Editor files
 *.sublime-*
@@ -14,7 +12,6 @@ jspm_packages/
 .idea
 
 # All types of logging files
-logs
 *.log
 *.log*
 
@@ -23,6 +20,5 @@ jest_*
 
 # anything that can be generated
 coverage
-README.html
 .#*
 .~*
