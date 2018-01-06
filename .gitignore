@@ -14,6 +14,7 @@ node_modules/
 # All types of logging files
 *.log
 *.log*
+*__snapshots__*
 
 # Ignore jest
 jest_*
