@@ -3,7 +3,7 @@ const React = require('react');
 
 const toHaveHTML = require('../toHaveHTML');
 
-function Fixture () {
+function Fixture1 () {
   return (
     <div id="root">
       <span id="child">Test</span>
@@ -17,7 +17,7 @@ const html = '<span id="child">Test</span>';
 describe('toHaveHTML', () => {
   [shallow, mount].forEach(builder => {
     describe(builder.name, () => {
-      const wrapper = builder(<Fixture />);
+      const wrapper = builder(<Fixture1 />);
       const truthyResults = toHaveHTML(wrapper.find('#child'), html);
       const falsyResults = toHaveHTML(wrapper.find('#child'), 'foo');
 

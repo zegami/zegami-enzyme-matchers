@@ -12,12 +12,8 @@ import single from '../utils/single';
 
 function toHaveHTML (enzymeWrapper: EnzymeObject, html: string): Matcher {
   const wrapperHTML = enzymeWrapper.html();
-
-  // normalize quotes
-  const useSingleQuotes = html.search('\'') !== -1;
-
-  const actualHTML = wrapperHTML.replace(/("|')/g, useSingleQuotes ? '\'' : '"');
-  const expectedHTML = html.replace(/("|')/g, useSingleQuotes ? '\'' : '"');
+  const actualHTML = wrapperHTML.replace(/("|')/g, '"');
+  const expectedHTML = html.replace(/("|')/g, '"');
 
   const pass = actualHTML === expectedHTML;
 
