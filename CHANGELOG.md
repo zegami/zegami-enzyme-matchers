@@ -1,3 +1,7 @@
+0.0.12
+=====
+  * Add `toContainComponent` matcher
+
 0.0.11
 =====
   * Add `toMatchElement` matcher
