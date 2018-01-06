@@ -7,7 +7,7 @@ function Fixture () {
   return (
     <div>
       <input defaultValue="test" />
-      <input defaultValue="foo" value="bar" onChange={jest.genMockFunction()} />
+      <input value="bar" onChange={jest.genMockFunction()} />
       <input />
     </div>
   );
