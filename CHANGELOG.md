@@ -1,3 +1,7 @@
+0.0.19
+=====
+  * toHaveProp, coverage improved
+
 0.0.18
 =====
   * toHaveState, coverage improved

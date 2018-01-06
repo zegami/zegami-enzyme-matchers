@@ -47,18 +47,20 @@ describe('toHaveProp', () => {
         const user = wrapper.find(User);
         const truthyResults = toHaveProp(user, 'arrayProp', [1, 2, 3]);
         const falsyResults = toHaveProp(user, 'arrayProp', [4, 5, 6]);
+        const noResults = toHaveProp(user, 'bingo', 'all the sixes');
 
         return {
           truthyResults,
           falsyResults,
+          noResults,
         };
       }
 
       it('returns the pass flag properly', () => {
-        const { truthyResults, falsyResults } = build();
-
+        const { truthyResults, falsyResults, noResults } = build();
         expect(truthyResults.pass).toBeTruthy();
         expect(falsyResults.pass).toBeFalsy();
+        expect(noResults.pass).toBeFalsy();
       });
 
       it(`returns the message with the proper pass verbage (${builder.name})`, () => {
