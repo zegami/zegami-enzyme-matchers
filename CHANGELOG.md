@@ -1,3 +1,7 @@
+0.0.17
+=====
+  * toHaveValue, coverage at 100%
+
 0.0.16
 =====
   * toBeChecked, coverage at 100%

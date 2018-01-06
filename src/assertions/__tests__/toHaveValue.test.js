@@ -8,6 +8,7 @@ function Fixture () {
     <div>
       <input defaultValue="test" />
       <input defaultValue="foo" value="bar" onChange={jest.genMockFunction()} />
+      <input />
     </div>
   );
 }
@@ -18,11 +19,15 @@ describe('toHaveValue', () => {
     describe(builder.name, () => {
       const wrapper = builder(<Fixture />).find('input').first();
       const truthyResults = toHaveValue(wrapper, 'test');
-      const falsyResults = toHaveValue(wrapper, 'Turdz');
+      const falsyResults = toHaveValue(wrapper, 'Nothing');
+
+      const lastWrapper = builder(<Fixture />).find('input').last();
+      const noResults = toHaveValue(lastWrapper, 'Nothing');
 
       it('returns the pass flag properly', () => {
         expect(truthyResults.pass).toBeTruthy();
         expect(falsyResults.pass).toBeFalsy();
+        expect(noResults.pass).toBeFalsy();
       });
 
       it(`returns the message with the proper pass verbage (${builder.name})`, () => {
