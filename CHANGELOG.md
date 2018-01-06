@@ -1,3 +1,7 @@
+0.0.10
+=====
+  * Add `toIncludeText` matcher
+
 0.0.9
 =====
   * Add `toBeChecked` matcher
