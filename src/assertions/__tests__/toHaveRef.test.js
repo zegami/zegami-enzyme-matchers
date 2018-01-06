@@ -18,12 +18,17 @@ describe('toHaveRef', () => {
   [shallow, mount].forEach(builder => {
     describe(builder.name, () => {
       const wrapper = mount(<Fixture />);
+      const willFail = shallow(<Fixture />);
       const truthyResults = toHaveRef(wrapper, 'child');
       const falsyResults = toHaveRef(wrapper, 'dad');
 
       it('returns the pass flag properly', () => {
         expect(truthyResults.pass).toBeTruthy();
         expect(falsyResults.pass).toBeFalsy();
+      });
+
+      it('toHaveRef will throw on shallow', () => {
+        expect(() => { toHaveRef(willFail, 'child'); }).toThrow(Error);
       });
 
       it(`returns the message with the proper pass verbage (${builder.name})`, () => {
