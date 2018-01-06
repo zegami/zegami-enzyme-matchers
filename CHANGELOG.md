@@ -1,3 +1,7 @@
+0.0.21
+=====
+  * toIncludeText, coverage at 100%
+
 0.0.20
 =====
   * toHaveRef, coverage at 100%

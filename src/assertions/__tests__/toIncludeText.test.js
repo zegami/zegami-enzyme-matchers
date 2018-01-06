@@ -18,10 +18,12 @@ describe('toIncludeText', () => {
       const wrapper = builder(<Fixture />).find('p');
       const truthyResults = toIncludeText(wrapper, 'important');
       const falsyResults = toIncludeText(wrapper, 'nope');
+      const noneResults = toIncludeText(wrapper);
 
       it('returns the pass flag properly', () => {
         expect(truthyResults.pass).toBeTruthy();
         expect(falsyResults.pass).toBeFalsy();
+        expect(noneResults.pass).toBeFalsy();
       });
 
       it(`returns the message with the proper pass verbage (${builder.name})`, () => {
