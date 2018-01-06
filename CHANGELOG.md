@@ -1,3 +1,10 @@
+0.0.9
+=====
+  * Add `toBeChecked` matcher
+  * Add `toBeDisabled` matcher
+  * Add `toBeEmpty` matcher
+  * Add `toBePresent` matcher
+
 0.0.8
 =====
   * Add `toHaveHtml` matcher
