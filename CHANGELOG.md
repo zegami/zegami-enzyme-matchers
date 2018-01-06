@@ -1,3 +1,7 @@
+0.0.7
+=====
+  * increase test coverage of utility functions
+
 0.0.6
 =====
   * fix name of test to have .test.js extensions
