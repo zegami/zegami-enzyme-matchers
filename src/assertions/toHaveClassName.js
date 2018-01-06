@@ -10,7 +10,7 @@ import type { EnzymeObject, Matcher } from '../types';
 import name from '../utils/name';
 import html from '../utils/html';
 
-export default function toHaveClassName(
+export default function toHaveClassName (
   enzymeWrapper: EnzymeObject,
   className: string
 ): Matcher {

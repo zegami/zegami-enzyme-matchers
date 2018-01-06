@@ -1,3 +1,14 @@
+0.0.8
+=====
+  * Add `toHaveHtml` matcher
+  * Add `toHaveProp` matcher
+  * Add `toHaveRef` matcher
+  * Add `toHaveState` matcher
+  * Add `toHaveStyle` matcher
+  * Add `toHaveTagName` matcher
+  * Add `toHaveText` matcher
+  * Add `toHaveValue` matcher
+
 0.0.7
 =====
   * increase test coverage of utility functions
