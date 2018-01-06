@@ -1,3 +1,8 @@
+0.0.11
+=====
+  * Add `toMatchElement` matcher
+  * Add `toMatchSelector` matcher
+
 0.0.10
 =====
   * Add `toIncludeText` matcher
