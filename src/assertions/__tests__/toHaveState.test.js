@@ -26,18 +26,21 @@ describe('toHaveState', () => {
         const wrapper = builder(<Fixture />);
         const truthyResults = toHaveState(wrapper, 'array', [1, 2, 3]);
         const falsyResults = toHaveState(wrapper, 'array', [4, 5, 6]);
+        const noResults = toHaveState(wrapper, 'bingo', 'all the sixes');
 
         return {
           truthyResults,
           falsyResults,
+          noResults,
         };
       }
 
       it('returns the pass flag properly', () => {
-        const { truthyResults, falsyResults } = build();
+        const { truthyResults, falsyResults, noResults } = build();
 
         expect(truthyResults.pass).toBeTruthy();
         expect(falsyResults.pass).toBeFalsy();
+        expect(noResults.pass).toBeFalsy();
       });
 
       it(`returns the message with the proper pass verbage (${builder.name})`, () => {

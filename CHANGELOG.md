@@ -1,3 +1,7 @@
+0.0.18
+=====
+  * toHaveState, coverage improved
+
 0.0.17
 =====
   * toHaveValue, coverage at 100%
