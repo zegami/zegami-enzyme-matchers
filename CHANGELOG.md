@@ -1,3 +1,7 @@
+0.0.16
+=====
+  * toBeChecked, coverage at 100%
+
 0.0.15
 =====
   * toHaveClassName, coverage at 100%
