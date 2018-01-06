@@ -1,3 +1,7 @@
+0.0.13
+=====
+  * forgot to add the 'new' components to the index.js file - doh !!!
+
 0.0.12
 =====
   * Add `toContainComponent` matcher

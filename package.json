@@ -1,6 +1,6 @@
 {
   "name": "zegami-enzyme-matchers",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Zegami Testing Matchers for Enzyme",
   "main": "lib/index.js",
   "homepage": "https://github.com/zegami/zegami-enzyme-matchers#readme",
