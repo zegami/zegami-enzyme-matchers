@@ -1,3 +1,7 @@
+0.1.02
+=====
+  * Add a post-install to run build after git install
+
 0.1.01
 =====
   * Add a new library regsiter function and index.js
