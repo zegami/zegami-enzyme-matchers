@@ -35,6 +35,23 @@ describe('getNodeName', () => {
         expect(name(builder(<Fixture />).find('i'))).toBe('2 i nodes found');
       });
 
+      // it('name testing', () => {
+      //   const Test = () => (
+      //     <div>
+      //       <i className="foo" />
+      //       <b className="foo" />
+      //     </div>
+      //   );
+      //   const Fixture = () => (
+      //     <div>
+      //       <Test />
+      //     </div>
+      //   );
+      //   const component = shallow(<Fixture />).find(Test).get(0);
+      //   const element = component._reactInternalInstance;
+      //   console.log('inst', element); // eslint-disable-line no-console
+      // });
+
       it('gives a useful string when given multiple mixed nodes', () => {
         const Fixture = () => (
           <div>
@@ -51,7 +68,11 @@ describe('getNodeName', () => {
       it('gives a useful string for arrays', () => {
         const wrapper = builder(
           <div>
-            <i />
+            <i>
+              <p>test</p>
+              <p>test</p>
+              <p>test</p>
+            </i>
             <i />
           </div>
         );

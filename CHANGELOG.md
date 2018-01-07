@@ -1,3 +1,7 @@
+0.1.01
+=====
+  * Add a new library regsiter function and index.js
+
 0.0.26
 =====
   * Add `toBeAString` matcher
