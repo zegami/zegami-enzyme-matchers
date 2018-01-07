@@ -1,3 +1,7 @@
+0.1.03
+=====
+  * remove `post-install` and manually build and check in the lib folder
+
 0.1.02
 =====
   * Add a post-install to run build after git install

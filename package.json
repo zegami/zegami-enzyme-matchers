@@ -1,6 +1,6 @@
 {
   "name": "zegami-enzyme-matchers",
-  "version": "0.1.02",
+  "version": "0.1.03",
   "description": "Zegami Testing Matchers for Enzyme",
   "main": "lib/index.js",
   "homepage": "https://github.com/zegami/zegami-enzyme-matchers#readme",
@@ -15,7 +15,6 @@
     "build:js": "babel src --out-dir lib --ignore tests",
     "build:flow": "flow-copy-source -v -i '**/__tests__/*.js' src lib",
     "build": "npm run clean && npm run build:js && npm run build:flow",
-    "postinstall": "postinstall-build lib",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -31,7 +30,6 @@
   "dependencies": {
     "circular-json-es6": "^2.0.1",
     "deep-equal-ident": "^1.1.1",
-    "postinstall-build": "^5.0.1"
   },
   "devDependencies": {
     "babel": "^6.23.0",
