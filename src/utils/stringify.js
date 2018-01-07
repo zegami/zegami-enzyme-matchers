@@ -35,7 +35,7 @@ function stringifySingle (key: string, value: any): Array<string> {
     stringifyingValue = colors.blue(value);
   } else if (value) {
     stringifyingValue = colors.green(value);
-  } else if (!value) {
+  } else {
     stringifyingValue = colors.red(value);
   }
 
