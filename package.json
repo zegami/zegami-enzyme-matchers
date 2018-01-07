@@ -24,9 +24,9 @@
   "bugs": {
     "url": "https://https://github.com/zegami/zegami-enzyme-matchers/issues"
   },
-  "files": {
+  "files": [
     "src"
-  },
+  ],
   "dependencies": {
     "circular-json-es6": "^2.0.1",
     "deep-equal-ident": "^1.1.1"
