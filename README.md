@@ -21,7 +21,7 @@ This library supports several testing frameworks including [Jest](https://github
 * [toBeDisabled()](#tobedisabled)
 * [toBeEmpty()](#tobeempty)
 * [toBePresent()](#tobepresent)
-* [toContainReact()](#tocontainreactreactinstanceobject)
+* [toContainComponent()](#tocontaincomponentreactinstanceobject)
 * [toHaveClassName()](#tohaveclassnameclassnamestring)
 * [toHaveHTML()](#tohavehtmlhtmlstring)
 * [toHaveProp()](#tohaveproppropkeystring-propvalueany)
@@ -168,7 +168,7 @@ expect(wrapper.find('span')).toBePresent();
 expect(wrapper.find('ul')).not.toBePresent();
 ```
 
-#### `toContainReact(reactInstance:Object)`
+#### `toContainComponent(reactInstance:Object)`
 
 | render | mount | shallow |
 | -------|-------|-------- |
@@ -204,8 +204,8 @@ class Fixture extends React.Component {
 
 const wrapper = mount(<Fixture />); // mount/render/shallow when applicable
 
-expect(wrapper).toContainReact(<User index={1} />);
-expect(wrapper).not.toContainReact(<User index={9000} />);
+expect(wrapper).toContainComponent(<User index={1} />);
+expect(wrapper).not.toContainComponent(<User index={9000} />);
 ```
 
 #### `toHaveClassName(className:string)`
