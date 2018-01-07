@@ -546,3 +546,11 @@ Tests:
 
 ```shell
 $ npm test
+```
+
+Build:
+
+```shell
+$ npm run build
+```
+
