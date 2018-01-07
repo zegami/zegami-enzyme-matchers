@@ -6,6 +6,7 @@
  * @flow
  */
 
+import toBeAString from './assertions/toBeAString';
 import toBeAFunction from './assertions/toBeAFunction';
 import toHaveClassName from './assertions/toHaveClassName';
 import toHaveHTML from './assertions/toHaveHTML';
@@ -26,6 +27,7 @@ import toMatchElement from './assertions/toMatchElement';
 import toContainComponent from './assertions/toContainComponent';
 
 export default {
+  toBeAString,
   toBeAFunction,
   toHaveClassName,
   toHaveHTML,

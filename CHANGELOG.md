@@ -1,3 +1,7 @@
+0.0.26
+=====
+  * Add `toBeAString` matcher
+
 0.0.25
 =====
   * getConsoleObject, coverage at 100%

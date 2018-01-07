@@ -1,13 +1,11 @@
 const React = require('react');
 const { shallow } = require('enzyme');
 
-const toBeAFunction = require('../toBeAFunction');
+const toBeAString = require('../toBeAString');
 
-const Fixture = () => { return false; };
-
-describe('toBeAFunction', () => {
-  const truthyResults = toBeAFunction(Fixture);
-  const falsyResults = toBeAFunction(1);
+describe('toBeAString', () => {
+  const truthyResults = toBeAString('string');
+  const falsyResults = toBeAString(1);
 
   it('returns the pass flag properly', () => {
     expect(truthyResults.pass).toBeTruthy();
