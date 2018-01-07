@@ -1,3 +1,7 @@
+0.0.25
+=====
+  * getConsoleObject, coverage at 100%
+
 0.0.24
 =====
   * stringify, coverage at 100%

@@ -1,11 +1,10 @@
 // @flow
 /* eslint-disable no-console */
-
 export default function getConsoleObject (): Object {
-  try {
+  if (console) {
     return console;
-  } catch (e) {
-    // If no global console object is available, set consoleObject to a dummy object.
+  } else {
     return {};
   }
 }
+/* eslint-enable no-console */
