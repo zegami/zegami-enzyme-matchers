@@ -17,6 +17,7 @@ This library supports several testing frameworks including [Jest](https://github
 
 * [toBeAFunction()](#toBeAFunction)
 * [toBeAString()](#toBeAFunction)
+* [toBeANumber()](#toBeAFunction)
 * [toBeChecked()](#tobechecked)
 * [toBeDisabled()](#tobedisabled)
 * [toBeEmpty()](#tobeempty)
@@ -52,18 +53,31 @@ expect(Mock).toBeAFunction();
 
 #### `toBeAString()`
 
-Assert that the given object is a function:
+Assert that the given object is a String:
 
 ```js
 import React from 'react'
 
 const isMock = 'string';
-const notMock = !;
+const notMock = 1;
 
 expect(isMock).toBeAString();
 expect(notMock).not.toBeAString();
 ```
 
+#### `toBeANumber()`
+
+Assert that the given object is a Number:
+
+```js
+import React from 'react'
+
+const isMock = 1;
+const notMock = 'string';
+
+expect(isMock).toBeANumber();
+expect(notMock).not.toBeANumber();
+```
 
 #### `toBeChecked()`
 
