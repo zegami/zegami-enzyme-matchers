@@ -7,6 +7,7 @@
  */
 
 import toBeAString from './assertions/toBeAString';
+import toBeANumber from './assertions/toBeANumber';
 import toBeAFunction from './assertions/toBeAFunction';
 import toHaveClassName from './assertions/toHaveClassName';
 import toHaveHTML from './assertions/toHaveHTML';
@@ -28,6 +29,7 @@ import toContainComponent from './assertions/toContainComponent';
 
 export default {
   toBeAString,
+  toBeANumber,
   toBeAFunction,
   toHaveClassName,
   toHaveHTML,

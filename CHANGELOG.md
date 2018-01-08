@@ -1,3 +1,7 @@
+0.1.04
+=====
+  * added `toBeANumber` to test suite of wrappers
+
 0.1.03
 =====
   * remove `post-install` and manually build and check in the lib folder
