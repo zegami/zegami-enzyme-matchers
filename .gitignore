@@ -10,6 +10,7 @@ node_modules/
 *.sublime-*
 .vscode/*
 .idea
+*.sw[nop]
 
 # All types of logging files
 *.log
@@ -21,5 +22,6 @@ jest_*
 
 # anything that can be generated
 coverage
+lib
 .#*
 .~*
